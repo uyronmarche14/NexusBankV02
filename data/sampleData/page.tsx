@@ -1,0 +1,26 @@
+export const sampleData = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "johndoe@example.com",
+    contactNumber: "+1234567890",
+    address: "123 Main St, Anytown, USA",
+    accountNumber: "123456789",
+    accountType: "Savings",
+    balance: 1500.75,
+    lastTransactionDate: "2023-10-01",
+    branch: "Downtown",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "janesmith@example.com",
+    contactNumber: "+1987654321",
+    address: "456 Elm St, Othertown, USA",
+    accountNumber: "987654321",
+    accountType: "Checking",
+    balance: 2500.0,
+    lastTransactionDate: "2023-10-15",
+    branch: "Uptown",
+  },
+];
