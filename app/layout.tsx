@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./globals.css";
 import Navbar from "@/app/components/navbar/page";
 
@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`antialiased `}>
         <Navbar />
         {children}
       </body>
