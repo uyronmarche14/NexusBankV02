@@ -6,66 +6,74 @@ import menu from "@/public/icons8-menu (1).svg";
 
 export const Navbar = () => {
   return (
-    <div className=" top-0 left-0 right-0 z-50 px-4 py-8 font-sm">
-      <nav className="mx-auto max-w-8xl px-48">
-        <div className="backdrop-blur-md bg-background-DEFAULT/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-lg border border-secondary-light/10 hover:border-secondary-light/20 transition-all duration-300">
+    <div className="relative top-0 left-0 right-0 z-50 px-4 py-6">
+      <nav className="mx-auto max-w-7xl">
+        <div
+          className="backdrop-blur-md bg-background-DEFAULT/80 rounded-2xl px-8 py-4 
+        flex items-center justify-between shadow-xl border border-white/10 
+        hover:border-white/20 transition-all duration-300"
+        >
           {/* Logo Section */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <Image
               src={logo}
-              width={40}
-              height={40}
+              width={45}
+              height={45}
               alt="Logo"
-              className="hover:rotate-45 transition-transform duration-300 ease-in-out"
+              className="hover:rotate-45 transition-transform duration-500 ease-in-out"
             />
             <Link
-              className="font-bold text-2xl bg-gradient-to-r from-primary-dark to-secondary bg-clip-text text-primary-dark hover:opacity-80 transition-opacity duration-300"
+              className="font-bold text-2xl bg-gradient-to-r from-primary-dark via-accent-DEFAULT to-secondary 
+              bg-clip-text hover:opacity-80 transition-all duration-300"
               href={"/"}
             >
-              NBank
+              NexusBank
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {["Home", "Services", "Contact", "About"].map((item, index) => (
               <Link
                 key={index}
-                className="relative font-medium text-primary-dark hover:text-secondary transition-colors duration-300 group"
-                href={
-                  item === "Home"
-                    ? "/"
-                    : item === "Services"
-                      ? "/pages/services"
-                      : item === "Contact"
-                        ? "/pages/Contact"
-                        : `/${item.toLowerCase()}`
-                }
+                className="relative font-medium text-primary-dark/90 hover:text-primary-dark 
+                transition-colors duration-300 text-lg group"
+                href={item === "Home" ? "/" : `/pages/${item.toLowerCase()}`}
               >
                 {item}
-                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                <span
+                  className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-accent-DEFAULT 
+                transition-all duration-300 group-hover:w-full"
+                />
               </Link>
             ))}
           </div>
 
           {/* User Section */}
-          <div className="flex items-center gap-4">
-            <p className="hidden sm:block font-bold text-primary-darkbg-primary-dark px-6 py-2.5 rounded-xl ">
+          <div className="flex items-center gap-6">
+            <p
+              className="hidden sm:block font-semibold text-primary-dark px-4 py-2 
+            bg-white/5 rounded-xl border border-white/10"
+            >
               RMR Q. UY
             </p>
 
-            <Link href={"/pages/auth/login"} className=" ">
-              <button className="bg-primary-dark text-primary-dark px-8 py-2.5 rounded-xl font-medium hover:shadow-lg hover:-translate-y-1 active:translate-y-[1px] transition-all duration-300 border-2 border-primary-dark  ">
+            <Link href={"/pages/auth/login"}>
+              <button
+                className="bg-accent-DEFAULT text-white px-8 py-2.5 rounded-xl 
+              font-medium hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 
+              transition-all duration-300 border border-accent-DEFAULT/20"
+              >
                 Login
               </button>
             </Link>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden">
+            <button className="md:hidden p-2 hover:bg-white/5 rounded-lg transition-colors duration-200">
               <Image
                 src={menu}
-                width={24}
-                height={24}
+                width={28}
+                height={28}
                 alt="Menu"
                 className="text-primary-dark"
               />

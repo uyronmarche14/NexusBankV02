@@ -1,33 +1,58 @@
 import React from "react";
+import ScrollingCard from "@/app/components/services/scrolling_card/page";
 
 export const LandingPage = () => {
   return (
-    <div className="h-[100vh] w-full bg-background-DEFAULT px-4  pb-8 relative items-center justify-center ">
-      <div className="w-full pt-36 *:rounded-3xl flex flex-col items-center justify-center relative overflow-hidden">
-        <div className="flex flex-col items-center justify-center flex-1 w-full relative z-10 m md:mt-0">
-          <div className="flex flex-col items-center gap-8 text-center max-w-5xl relative z-10">
-            <div className="space-y-2">
-              <h1 className="text-4xl md:text-7xl font-bold text-primary-dark leading-20 tracking-tight drop-shadow-sm font-sm text-center">
-                NBANK Where Financial Clarity Meets Elegant Simplicity.
-              </h1>
-            </div>
+    <div className="min-h-screen w-full bg-background-DEFAULT relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-[-15%] left-[-15%] w-[600px] h-[600px] bg-primary-DEFAULT/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-[-15%] right-[-15%] w-[600px] h-[600px] bg-accent-DEFAULT/10 rounded-full blur-[150px]" />
+      </div>
 
-            <p className="text-lg text-text-DEFAULT max-w-4xl leading-relaxed backdrop-blur-sm text-center">
-              Your financial journey starts here. Nexus Banking combines
-              cutting-edge security with intuitive design, giving you complete
-              control over your finances with a touch of sophistication.
-              Experience banking reimagined for the modern world.
+      <div className="relative px-6 py-24 md:py-40 max-w-8xl mx-auto">
+        <div className="flex flex-col items-center justify-center space-y-16">
+          {/* Subtle badge above heading */}
+          <div className="bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 mb-2 animate-fade-in">
+            <span className="text-base text-primary-dark/80">
+              Welcome to the Future of Banking
+            </span>
+          </div>
+
+          {/* Main content */}
+          <div className="space-y-10 text-center max-w-5xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-primary-dark leading-tight tracking-tight">
+              Where Financial Clarity Meets{" "}
+              <span className="text-accent-DEFAULT">Elegant Simplicity</span>
+            </h1>
+
+            <p className="text-xl text-text-DEFAULT/80 leading-relaxed max-w-4xl mx-auto">
+              Your financial journey starts here. Experience banking reimagined
+              for the modern world, with cutting-edge security and intuitive
+              design.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 w-full max-w-sm sm:max-w-none items-center justify-center">
-              <button className="flex-1 bg-accent-DEFAULT text-white text-lg font-semibold h-14 rounded-xl hover:shadow-lg hover:translate-y-[-2px] transition-all duration-300 ease-out backdrop-blur-sm border-1 border-color-flare">
-                Start Your Savings
+            {/* CTA Buttons with enhanced styling */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-6">
+              <button
+                className="px-10 py-5 bg-accent-DEFAULT text-white font-medium rounded-xl text-lg
+                hover:shadow-lg hover:shadow-accent-DEFAULT/20 hover:-translate-y-0.5 
+                transition-all duration-300 ease-out backdrop-blur-sm"
+              >
+                Start Your Journey
               </button>
-              <button className="flex-1 bg-white/10 backdrop-blur-md text-primary-dark text-lg font-semibold h-14 rounded-xl border border-white/20 hover:bg-white/20 hover:border-white/30 hover:shadow-md transition-all duration-300">
+              <button
+                className="px-10 py-5 bg-white/5 text-primary-dark font-medium rounded-xl text-lg
+                border border-white/10 hover:bg-white/10 hover:border-white/20 
+                hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              >
                 Explore Services
               </button>
             </div>
+
+            {/* Trust indicators */}
           </div>
+          <ScrollingCard />
         </div>
       </div>
     </div>

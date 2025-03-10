@@ -14,6 +14,14 @@ export const bgEffects = () => {
         <div className="absolute top-[135%] left-[65%] w-[500px] h-[500px] rounded-full bg-[rgba(110,88,207,0.7)] blur-[120px] animate-pulse" />
         <div className="absolute top-[-75%] right-[25%] w-[400px] h-[400px] rounded-full bg-[rgba(112,98,238,0.3)] blur-[120px] animate-pulse delay-1000" />
         <div className="absolute bottom-[-35%] left-[55%] w-[600px] h-[600px] rounded-full bg-[rgba(46,31,255,0.3)] blur-[130px] animate-pulse delay-2000" />
+
+        <div className="absolute top-[255%] left-[65%] w-[500px] h-[500px] rounded-full bg-[rgba(110,88,207,0.7)] blur-[120px] animate-pulse" />
+        <div className="absolute top-[275%] left-[25%] w-[400px] h-[400px] rounded-full bg-[rgba(112,98,238,0.3)] blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute bottom-[2355%] left-[15%] w-[600px] h-[600px] rounded-full bg-[rgba(46,31,255,0.3)] blur-[130px] animate-pulse " />
+
+        <div className="absolute top-[335%] left-[65%] w-[500px] h-[500px] rounded-full bg-[rgba(110,88,207,0.7)] blur-[120px] animate-pulse delay-300" />
+        <div className="absolute top-[305%] left-[90%] w-[400px] h-[400px] rounded-full bg-[rgba(112,98,238,0.3)] blur-[120px] animate-pulse delay-1000" />
+        <div className="absolute top-[385%] left-[85%] w-[600px] h-[600px] rounded-full bg-[rgba(46,31,255,0.3)] blur-[130px] animate-pulse delay-1000" />
       </div>
     </div>
   );

@@ -2,30 +2,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #121212; /* Darker Black */
-  --foreground: #e5e5e5; /* Light Gray */
-  --color-primary: #5e5ce6; /* Subtle Purple */
-  --color-secondary: #282828; /* Medium Dark Gray */
-  --color-text: #ffffff; /* White */
-  --color-success: #00c853; /* Green */
-  --color-warning: #ffd600; /* Yellow */
-  --color-danger: #ff3d00; /* Red */
-  --color-flare: rgba(94, 92, 230, 0.08); /* Subtle Purple Glow */
-  --color-glass: rgba(255, 255, 255, 0.08); /* Slightly More Visible White */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --color-primary: #5e5ce6;
+  --color-secondary: #f0f0f0;
+  --color-text: #1a1a1a;
+  --color-success: #00c853;
+  --color-warning: #ffd600;
+  --color-danger: #ff3d00;
+  --color-flare: rgba(94, 92, 230, 0.08);
+  --color-glass: rgba(26, 26, 26, 0.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a; /* Almost Black */
-    --foreground: #e5e5e5; /* Light Gray */
+    --background: #0a0a0a;
+    --foreground: #ffffff;
     --color-primary: #e5e5e5; /* Darker Purple */
     --color-secondary: #1e1e1e; /* Darker Gray */
-    --color-text: #ffffff; /* White */
+    --color-text: #ffffff;
     --color-success: #009624; /* Dark Green */
     --color-warning: #c7a500; /* Dark Yellow */
     --color-danger: #cc3000; /* Dark Red */
     --color-flare: rgba(94, 92, 230, 0.12); /* Stronger Purple Glow */
-    --color-glass: rgba(255, 255, 255, 0.12); /* More Visible White */
+    --color-glass: rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -50,4 +50,16 @@ body {
   .text-secondary {
     color: var(--color-secondary);
   }
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }
