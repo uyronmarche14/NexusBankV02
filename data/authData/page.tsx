@@ -5,6 +5,10 @@ import {
   FaUser,
   FaPhone,
   FaBuilding,
+  FaGithub,
+  FaLinkedin,
+  FaGoogle,
+  FaFacebook,
 } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 
@@ -93,6 +97,28 @@ const authData = {
       placeholder: "Create a password",
       icon: <FaLock className="w-5 h-5 text-gray-500" />,
       required: true,
+    },
+  ],
+
+  social: [
+    {
+      id: 1,
+      label: "Sign in with Google",
+      FaGoogle,
+      icon: <FaGoogle className="w-10 h-10" />,
+      url: "/auth/google",
+    },
+    {
+      id: 2,
+      label: "Sign in with Facebook",
+      icon: <FaFacebook className="w-10 h-10" />,
+      url: "/auth/facebook",
+    },
+    {
+      id: 3,
+      label: "Sign in with Github",
+      icon: <FaGithub className="w-10 h-10" />,
+      url: "/auth/github",
     },
   ],
 
