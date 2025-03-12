@@ -1,7 +1,15 @@
+"use client";
 import React from "react";
 import ScrollingCard from "@/app/components/services/scrolling_card/page";
+import { useRouter } from "next/navigation";
 
 export const LandingPage = () => {
+  const router = useRouter();
+
+  const handleExploreClick = () => {
+    router.push("/"); // Navigate to the home page where Test component is rendered
+  };
+
   return (
     <div className="min-h-screen w-full bg-background-DEFAULT relative overflow-hidden">
       {/* Decorative background elements */}
@@ -42,6 +50,7 @@ export const LandingPage = () => {
                 Start Your Journey
               </button>
               <button
+                onClick={handleExploreClick}
                 className="px-10 py-5 bg-white/5 text-primary-dark font-medium rounded-xl text-lg
                 border border-white/10 hover:bg-white/10 hover:border-white/20 
                 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
